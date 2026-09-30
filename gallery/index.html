@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photos JFR 2026</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f6f8;
+      color: #202124;
+    }
+
+    .container {
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 36px 28px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      font-size: 27px;
+      margin: 0 0 12px;
+    }
+
+    p {
+      color: #5f6368;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+
+    button {
+      width: 100%;
+      border: 0;
+      border-radius: 7px;
+      padding: 15px;
+      font-size: 16px;
+      font-weight: 600;
+      background: #1a73e8;
+      color: white;
+      cursor: pointer;
+    }
+
+    #error {
+      display: none;
+      margin-top: 24px;
+      padding: 16px;
+      background: #f5f6f8;
+      border-radius: 7px;
+      color: #5f6368;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="card">
+
+      <h1>📸 Les photos des JFR sont en ligne !</h1>
+
+      <p>
+        Retrouvez les photos prises pendant l'événement.
+      </p>
+
+      <button onclick="showAlbum()">
+        Voir l'album
+      </button>
+
+      <div id="error">
+        <strong>Album temporairement indisponible</strong><br><br>
+        Nous rencontrons actuellement un problème d'accès aux photos.
+        Merci de réessayer ultérieurement.
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function showAlbum() {
+      document.getElementById("error").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
