@@ -92,8 +92,16 @@
 
   <script>
     function showAlbum() {
-      document.getElementById("error").style.display = "block";
-    }
+  document.getElementById("error").style.display = "block";
+
+  if (window.goatcounter && window.goatcounter.count) {
+    window.goatcounter.count({
+      path: 'event-jfr-album',
+      title: 'Clic Voir album',
+      event: true
+    });
+  }
+}
   </script>
 
  <script
