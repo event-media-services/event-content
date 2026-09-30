@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Un café offert ?</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f6f8;
+      color: #202124;
+    }
+
+    .container {
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 36px 28px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      font-size: 27px;
+      margin: 0 0 12px;
+    }
+
+    p {
+      color: #5f6368;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+
+    button {
+      width: 100%;
+      border: 0;
+      border-radius: 7px;
+      padding: 15px;
+      font-size: 16px;
+      font-weight: 600;
+      background: #1a73e8;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="card">
+
+      <h1>☕ Un café offert ?</h1>
+
+      <p>
+        Tentez de gagner votre prochain café en quelques secondes.
+      </p>
+
+      <button onclick="participate()">
+        Participer
+      </button>
+
+    </div>
+  </div>
+
+  <script>
+    function participate() {
+
+      if (window.goatcounter && window.goatcounter.count) {
+        window.goatcounter.count({
+          path: 'coffee-participation',
+          title: 'Clic Participer café',
+          event: true
+        });
+      }
+
+      setTimeout(function() {
+        window.location.href = "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=qrpa7uK59ESvz4YDub7DfFoIsVykP1NLvyIdVk0rupVUMzExNjIwNjBVS0sxM1ZTVFpKR1JRRUhZMC4u";
+      }, 300);
+    }
+  </script>
+
+  <script
+    data-goatcounter="https://event-media-services.goatcounter.com/count"
+    async
+    src="//gc.zgo.at/count.js">
+  </script>
+
+</body>
+</html>
